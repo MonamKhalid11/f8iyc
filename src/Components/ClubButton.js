@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
         fontSize: hp('2'),
         fontWeight: '400',
         fontFamily: "Helvetica Neue",
-
     },
     BtnTextBlue: {
         color: '#ffff',

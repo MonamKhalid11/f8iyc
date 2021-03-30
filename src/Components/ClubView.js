@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground, Image, TouchableOpacity } from 'react-native';
 import { useTheme } from '@/Theme'
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
 
@@ -11,8 +11,19 @@ const ClubView = (props) => {
     return (
         <View style={styles.parent}>
             <ImageBackground style={styles.container}
-                source={Images.storyBg}
+                source={props.isContact ? Images.contact : Images.storyBg}
             >
+                {props.drawer ?
+                    <TouchableOpacity onPress={props.onPress}
+                        style={styles.appDrawer}
+                    >
+                        <Image
+                            source={Images.drawerIcon}
+                            style={styles.drawerIcon}
+                        />
+                    </TouchableOpacity>
+                    : null
+                }
                 <Text style={styles.heading}>{props.heading}</Text>
                 <Text style={styles.subHeading}>{props.subHeadings}</Text>
             </ImageBackground>
@@ -33,7 +44,18 @@ const styles = StyleSheet.create({
     container: {
         width: "100%",
         height: heightPercentageToDP('50'),
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-end',
+    },
+    appDrawer: {
+        position: 'absolute',
+        top: widthPercentageToDP('5'),
+        left: widthPercentageToDP('5')
+    },
+    drawerIcon: {
+        height: widthPercentageToDP('7'),
+        width: widthPercentageToDP('7'),
+        resizeMode: 'contain',
+
     },
     heading: {
         color: "#ffff",
@@ -55,7 +77,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffff',
         borderTopLeftRadius: widthPercentageToDP('3'),
         borderTopRightRadius: widthPercentageToDP('3'),
-        marginTop: heightPercentageToDP('-18')
+        marginTop: heightPercentageToDP('-18'),
+    },
+    base: {
+
     }
 });
 

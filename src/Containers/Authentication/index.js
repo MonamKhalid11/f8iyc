@@ -18,6 +18,7 @@ const Login = (props) => {
                 <ClubButton
                     name={t('loginScreen.login')}
                     auth={true}
+                    onPress={() => navigate('SignIn')}
                 />
                 <ClubButton
                     name={t('loginScreen.create')}
