@@ -21,6 +21,12 @@ const PageItem = (props) => {
             case t('drawer.contact'):
                 navigate('Contact')
                 break;
+            case t('drawer.account'):
+                navigate('Profile')
+                break;
+            case t('drawer.Push'):
+                navigate('Notification')
+                break;
         }
 
     }
@@ -37,7 +43,7 @@ const PageItem = (props) => {
 // define your styles
 const styles = StyleSheet.create({
     blueButton: {
-        height: heightPercentageToDP('12'),
+        height: heightPercentageToDP('14'),
         width: widthPercentageToDP('50'),
         marginBottom: heightPercentageToDP('1'),
         backgroundColor: Colors.buttonBg,

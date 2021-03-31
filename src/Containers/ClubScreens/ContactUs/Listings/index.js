@@ -1,23 +1,28 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import Contact from '../Contact'
 // create a component
 const ContactList = (props) => {
     return (
-        <View style={styles.container}>
-            <Text>ContactList</Text>
-        </View>
+        <ScrollView contentContainerStyle={styles.container}
+            showsVerticalScrollIndicator={false}
+        >
+            {props.contacts && props.contacts.map((contact) => {
+                return (
+                    <Contact
+                        contact={contact}
+                    />
+                )
+            })}
+        </ScrollView>
     );
 };
 
 // define your styles
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#2c3e50',
+        flexGrow: 1,
     },
 });
 

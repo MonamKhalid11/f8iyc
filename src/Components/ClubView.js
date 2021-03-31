@@ -11,7 +11,7 @@ const ClubView = (props) => {
     return (
         <View style={styles.parent}>
             <ImageBackground style={styles.container}
-                source={props.isContact ? Images.contact : Images.storyBg}
+                source={props.isProfile ? Images.profileBg : props.isContact ? Images.contact : Images.storyBg}
             >
                 {props.drawer ?
                     <TouchableOpacity onPress={props.onPress}
@@ -23,6 +23,25 @@ const ClubView = (props) => {
                         />
                     </TouchableOpacity>
                     : null
+                }
+                {
+                    props.isProfile ?
+
+                        <View style={{ alignSelf: 'center' }}>
+                            <View style={{ borderWidth: widthPercentageToDP('2'), borderColor: '#CAB4AC', height: widthPercentageToDP('35'), width: widthPercentageToDP('35'), borderRadius: 100 }}>
+                                <Image
+                                    source={Images.profiledp}
+                                    style={styles.profile}
+                                />
+                            </View>
+                            <Image
+                                source={Images.addBtn}
+                                style={styles.btn}
+                            />
+
+                        </View>
+                        :
+                        null
                 }
                 <Text style={styles.heading}>{props.heading}</Text>
                 <Text style={styles.subHeading}>{props.subHeadings}</Text>
@@ -43,7 +62,7 @@ const styles = StyleSheet.create({
     },
     container: {
         width: "100%",
-        height: heightPercentageToDP('50'),
+        height: heightPercentageToDP('55'),
         justifyContent: 'flex-end',
     },
     appDrawer: {
@@ -81,6 +100,20 @@ const styles = StyleSheet.create({
     },
     base: {
 
+    },
+    btn: {
+        height: widthPercentageToDP('7'),
+        width: widthPercentageToDP('7'),
+        resizeMode: 'contain',
+        position: 'absolute',
+        right: 0,
+        bottom: widthPercentageToDP('-4'),
+    },
+    profile: {
+        height: '100%',
+        width: '100%',
+        resizeMode: 'contain',
+        overflow: 'hidden'
     }
 });
 

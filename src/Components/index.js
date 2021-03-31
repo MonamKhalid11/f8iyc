@@ -4,6 +4,4 @@ export { default as ClubView } from './ClubView'
 export { default as RegisterForm } from './Forms/Register'
 export { default as LoginForm } from './Forms/Login'
 export { default as CustomDrawer } from './CustomDrawer'
-
-
-
+export { default as UpdateProfile } from './Forms/Update'

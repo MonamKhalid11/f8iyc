@@ -18,5 +18,12 @@ export default function () {
     next: require('@/Assets/Images/nextBtn.png'),
     events: require('@/Assets/Images/events.png'),
     contact: require('@/Assets/Images/contactus.png'),
+    contactIcon: require('@/Assets/Images/contact.png'),
+    location: require('@/Assets/Images/location.png'),
+    OfficeHours: require('@/Assets/Images/OfficeHours.png'),
+    profileBg: require('@/Assets/Images/profilebg.png'),
+    addBtn: require('@/Assets/Images/addBtn.png'),
+    profiledp: require('@/Assets/Images/profiledp.png'),
+
   }
 }

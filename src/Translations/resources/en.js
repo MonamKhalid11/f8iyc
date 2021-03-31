@@ -42,5 +42,14 @@ export default {
   contact: {
     heading: "Learn More",
     subHeadings: "CONTACT US",
+  },
+  profile: {
+    heading: "Jane Appleseed",
+    subHeadings: "JANEAPPLESEED01",
+    next: 'Edit Information'
+  },
+  notifiy: {
+    heading: "Events",
+    subHeadings: "NOTIFICATIONS",
   }
 }

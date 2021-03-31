@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     logo: {
-        height: widthPercentageToDP('30'),
-        width: widthPercentageToDP('30'),
+        height: widthPercentageToDP('40'),
+        width: widthPercentageToDP('40'),
         resizeMode: 'contain',
         alignSelf: 'center',
         marginTop: widthPercentageToDP('10')
